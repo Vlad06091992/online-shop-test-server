@@ -1,4 +1,6 @@
-const db = {
+import {RootDBType} from "./types";
+
+const db:RootDBType = {
   products: [
     {
       id: 1,
