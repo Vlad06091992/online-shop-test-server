@@ -1,7 +1,7 @@
 import "dotenv/config";
 import express, {json} from "express";
 import cors from "cors";
-import bodyParser from "body-parser";
+// import bodyParser from "body-parser";
 import {getProductsRouter} from "./features/products/products.router";
 import {getProductRouter} from "./features/product/product.router";
 
@@ -16,7 +16,7 @@ export const Routes = {
 
 app.use(json());
 app.use(cors());
-app.use(bodyParser())
+// app.use(bodyParser())
 app.use(Routes.products, getProductsRouter())
 app.use(Routes.product, getProductRouter())
 
