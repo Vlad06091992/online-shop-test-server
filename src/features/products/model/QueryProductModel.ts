@@ -1,6 +1,10 @@
+import {SortingFieldType, SortingOptionType} from "src/types";
+
 export type QueryProductModel = {
     /**
      * title required for course search
      */
-    title:string
+    colors?:string
+    sortingOptions?:SortingOptionType
+    sortField:SortingFieldType
 }

@@ -1,3 +1,5 @@
+import {Request} from "express";
+
 export type RootDBType = {
     products:ProductType[]
 }
@@ -21,3 +23,8 @@ export type ProductType = {
 
 export type SortingOptionType = 'asc' | 'desc'
 export type SortingFieldType = 'price' | 'popularity'
+
+export type RequestWithQuery<T> = Request<{}, {}, {}, T>
+export type RequestWithBody<T> = Request<{}, {}, T, {}>
+export type RequestWithParams<T> = Request<T, {}, {}, {}>
+export type RequestWithParamsAndBody<T,D> = Request<T, {}, D, {}>
