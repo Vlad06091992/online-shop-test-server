@@ -1,6 +1,6 @@
 import {ProductType} from "../types";
 
-export const filterColors = (colors:string[], products:ProductType[]) => {
+export const filterProductsByColor = (colors:string[], products:ProductType[]) => {
     return products.filter(p => {
         if (!colors.length) return true
         let res = false

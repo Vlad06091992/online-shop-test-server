@@ -6,10 +6,6 @@ export type RootDBType = {
 
 export type ThemeColors = 'black' | 'blue' | 'green' | 'purple' | 'gray' | 'white'
 
-export type ColorOptionsType = {
-    color:ThemeColors,
-    title:string
-}[]
 
 export type ProductType = {
     id: number;
@@ -21,8 +17,8 @@ export type ProductType = {
     desc: string;
 };
 
-export type SortingOptionType = 'asc' | 'desc'
-export type SortingFieldType = 'price' | 'popularity'
+export type SortOrderType = 'asc' | 'desc'
+export type SortByType = 'price' | 'popularity'
 
 export type RequestWithQuery<T> = Request<{}, {}, {}, T>
 export type RequestWithBody<T> = Request<{}, {}, T, {}>

@@ -1,11 +1,11 @@
-import {ProductType, SortingFieldType, SortingOptionType} from "../types";
+import {ProductType, SortByType,SortOrderType} from "../types";
 
-export const sortProducts = (products: ProductType[], sortField: SortingFieldType, sortOption?: SortingOptionType,) => {
+export const sortProducts = (products: ProductType[], sortBy:SortByType, sortOrder?: SortOrderType,) => {
     return products.sort((p1, p2) => {
-        if (sortField == 'price' && sortOption === 'asc') {
-            return p1[sortField] - p2[sortField]
+        if (sortBy == 'price' && sortOrder === 'asc') {
+            return p1[sortBy] - p2[sortBy]
         } else {
-            return p2[sortField] - p1[sortField]
+            return p2[sortBy] - p1[sortBy]
         }
     })
 }

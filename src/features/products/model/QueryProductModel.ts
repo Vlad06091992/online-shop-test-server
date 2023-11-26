@@ -1,7 +1,7 @@
-import {SortingFieldType, SortingOptionType} from "../../../types";
+import {SortByType,SortOrderType} from "../../../types";
 
 export type QueryProductModel = {
     colors?:string
-    sortingOption?:SortingOptionType
-    sortField:SortingFieldType
+    sortOrder?:SortOrderType
+    sortBy:SortByType
 }
