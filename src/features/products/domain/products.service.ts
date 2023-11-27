@@ -4,7 +4,7 @@ import {filterProductsByColor} from "../../../utils/filterProductsByColor";
 import {sortProducts} from "../../../utils/sortProducts";
 
 
-export const productsService = { //business(application) layer
+export const productsService = {
     async getProducts(params: QueryProductModel) {
         const {sortBy,sortOrder, colors} = params
         const colorsArray = colors?.split(',') || []

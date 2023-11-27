@@ -1,11 +1,13 @@
-import express from "express";
+import express,{Response} from "express";
+import {RequestWithParams,ProductType} from "../../types";
 import {productService} from "./domain/product.service";
+import {URIParamsProductIdModel} from "./model/URIParamsProductIdModel";
 import {HTTP_STATUSES} from "../../http_statuses/http_statuses";
 
 
 export const getProductRouter = () => {
     const router = express.Router()
-    router.get('/:id', async (req: any, res: any) => {
+    router.get('/:id', async (req: RequestWithParams<URIParamsProductIdModel>, res: Response<ProductType | number>) => {
         console.log(req.params.id)
         const product = await productService.getProductById(+req.params.id)
         if (product) {
