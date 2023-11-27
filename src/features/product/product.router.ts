@@ -8,7 +8,6 @@ import {HTTP_STATUSES} from "../../http_statuses/http_statuses";
 export const getProductRouter = () => {
     const router = express.Router()
     router.get('/:id', async (req: RequestWithParams<URIParamsProductIdModel>, res: Response<ProductType | number>) => {
-        console.log(req.params.id)
         const product = await productService.getProductById(+req.params.id)
         if (product) {
             res.send(product)
