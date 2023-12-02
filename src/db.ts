@@ -27,7 +27,7 @@ const db:RootDBType = {
     {
       id: 3,
       name: "Смартфон Xiaomi Redmi A2+ 64 ГБ",
-      price: 7499,
+      price: 7498,
       image:
         "https://c.dns-shop.ru/thumb/st1/fit/500/500/43aa8e3640bdc253df179db3eecd9cd3/b5926e67b994494fd67cdf8b75d9db0bad7bc5f4bc9839937ffc3daf7053abdc.jpg.webp",
       colors: ["black", "blue", "green"],
