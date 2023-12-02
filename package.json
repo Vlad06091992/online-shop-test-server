@@ -1,26 +1,24 @@
 {
-  "name": "server",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "backend-base-express-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "dev": "nodemon --exec node --inspect --no-warnings=ExperimentalWarning --loader=ts-node/esm src/index.ts",
-    "build": "npx tsc",
-    "start": "node dist/index.js"
+    "test:watch": "jest --watch",
+    "test": "jest -i",
+    "watch": "tsc -w",
+    "dev": "nodemon --inspect dist/index.js"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "body-parser": "^1.19.2"
+    "body-parser": "^1.19.2",
+    "express": "^4.18.2"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.15",
-    "@types/express": "^4.17.20",
+    "@types/express": "^4.17.18",
     "@types/node": "^20.8.10",
+    "dotenv": "^16.3.1",
     "nodemon": "^3.0.1",
     "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.2.2"
   }
 }
