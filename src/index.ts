@@ -14,7 +14,10 @@ export const Routes = {
 
 
 app.use(json());
-app.use(cors());
+app.use(cors({
+    origin:true,
+    credentials:true
+}));
 app.use(Routes.products, getProductsRouter())
 app.use(Routes.product, getProductRouter())
 
