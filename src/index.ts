@@ -18,7 +18,7 @@ const options = {
     definition: {
         openapi: "3.0.0",
         info: {
-            title: "REST API Docs",
+            title: "Online-shop REST API",
             version: '1.0.0'
         },
     },
@@ -50,7 +50,7 @@ app.use('*.css', (req, res, next) => {
     next();
 });
 
-app.use("/",
+app.use("/docs",
     swaggerUi.serve,
     swaggerUi.setup(swaggerSpec, {customCssUrl: CSS_URL})
 );
