@@ -5,7 +5,7 @@ import {getProductsRouter} from "./features/products/products.router";
 import {getProductRouter} from "./features/product/product.router";
 
 const CSS_URL =
-    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.1.4/swagger-ui.css";
+    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.10.4/swagger-ui.css";
 const app = express();
 const port = process.env.PORT || 7542;
 
