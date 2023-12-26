@@ -22,5 +22,5 @@ app.use(Routes.products, getProductsRouter())
 app.use(Routes.product, getProductRouter())
 
 app.listen(port, () => {
-    console.log(`Server is listening on port ${port}`);
+    console.log(`Server is listening on port 7542`);
 });
